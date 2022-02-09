@@ -31,12 +31,12 @@ function key(arr) {
     let keys = [];
 
     for (let i = 0; i < arr.length; i++) {
-       keys.push(arr[i].key)
+        for (const keysKey in arr[i]) {
+            keys.push(keysKey)
+        }
     }
     return keys;
 }
 
 console.log(key(arr));
-//     - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
-// EXAMPLE:
-//     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+
