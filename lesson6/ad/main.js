@@ -13,11 +13,16 @@ document.writeln(cutString('наслаждение',3))*/
 // функція не чутлива до регістру (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення)
 // Протестувати на значеннях
 // someemail@gmail.com
-// someeMAIL@gmail.com
+let email = 'someeMAIL@gmail.com'
 // someeMAIL@i.ua
 // some.email@gmail.com
-
-
+let validator = (email) =>{
+    if(email.replace('@')){
+        console.log(email);
+    }
+}
+validator('someemail@gmail.com')
+console.log(email.replace('@'));
 // Примітка
 // Для тих, хто дуже розумний, та почне використовувати регулярні вирази одразу "ні".
 // Своїм мозком подумайте над протоколом, з регулярками будете потім бавитись.
